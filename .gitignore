@@ -22,7 +22,7 @@
 
 .byebug_history
 
-/.idea
+.idea/**/*
 
 
 *.rbc
