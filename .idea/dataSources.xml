@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Rails depot: development" uuid="dbecceba-64c8-406d-a1b3-c26e08e33cfd">
+    <data-source source="LOCAL" name="Rails depot: development" uuid="bb25f3ff-c467-4bb9-839a-98e98646c241">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
@@ -12,7 +12,7 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="Rails depot: test" uuid="e072c9a4-6981-4edb-96b0-08ae99cbba02">
+    <data-source source="LOCAL" name="Rails depot: test" uuid="7d1a9ea3-63b6-47e4-a506-fc1f1a3086c8">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
