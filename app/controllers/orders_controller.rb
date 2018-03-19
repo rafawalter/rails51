@@ -1,9 +1,8 @@
 class OrdersController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart, only: %i[new create]
   before_action :ensure_cart_isnt_empty, only: [:new]
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_order, only: %i[show edit update destroy]
 
   # GET /orders
   # GET /orders.json
@@ -13,8 +12,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/1
   # GET /orders/1.json
-  def show
-  end
+  def show; end
 
   # GET /orders/new
   def new
@@ -22,8 +20,7 @@ class OrdersController < ApplicationController
   end
 
   # GET /orders/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /orders
   # POST /orders.json
@@ -35,6 +32,8 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy session[:cart_id]
         session[:cart_id] = nil
+
+        OrderMailer.received(@order).deliver_later
 
         format.html { redirect_to store_index_url, notice: 'Thank you for your order' }
         format.json { render :show, status: :created, location: @order }
